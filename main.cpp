@@ -1,20 +1,18 @@
-#include "Source.cpp"
+#include "BTree.cpp"
+#include "Dictionary.h"
+#include "Couple.cpp"
+
 
 int main()
 {
-	BTree<int> tree(10);
-	tree.add(7);
-	tree.add(54);
-	tree.add(2);
-	tree.add(1);
-	tree.add(41);
+	Couple<string, Dictionary> cpl;
+	string word = "penguin";
+	Dictionary d;
 
-	tree.print();
+	std::cin >> d;
 
-	tree.erase(10);
-
-	tree.print();
-
-
+	cpl.makeCouple(word, d);
+	std::cout << cpl << std::endl;
+	system("pause");
 	return 0;
 }
